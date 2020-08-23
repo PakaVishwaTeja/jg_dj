@@ -1,0 +1,175 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jee gnan</title>
+    <link rel="icon" href="{% static './images/PNG.png'%}" />
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+      shrink-to-fit="no"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- p.v.t. -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/custom-responsive-style.css' %}"
+    />
+    <script
+      type="text/javascript"
+      src="{% static 'scripts/jquery-3.2.1.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'scripts/plugin-active.js' %}"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="mobile-logo">
+        <div>
+          <a href="../"
+            ><img src="{% static './images/logo with name (2).png' %}"
+          /></a>
+        </div>
+      </div>
+      <a class="menu-toggle rounded" href="#">
+        <i class="fa fa-bars"></i>
+      </a>
+      <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-nav-item">
+            <a class="smooth-scroll" href="#video"></a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a class="smooth-scroll" href="#video"></a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="../sign_up">SignUp</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="../log_in">LogIn</a>
+          </li>
+          <!--
+          <li class="sidebar-nav-item">
+            <a class="smooth-scroll" href="#OurAim--">Our Aim</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a class="smooth-scroll" href="#Testimonials">Quiz</a>
+          </li>-->
+          <li class="sidebar-nav-item">
+            <a href="early_result.html">Results</a>
+          </li>
+
+          <li class="sidebar-nav-item">
+            <a class="smooth-scroll" href="#Contact">Contact Us</a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="../about_us/">About Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="Banner">
+      <div class="logo">
+        <a href="../"
+          ><img
+            src="{% static 'images/PNG.png' %}"
+            height="200px"
+            width="200px"
+        /></a>
+      </div>
+      <div class="blacksection">
+        <h1>
+          {{main_header_l1}}<br />{{main_header_l2}}<br />{{main_header_l3}}
+        </h1>
+      </div>
+    </section>
+    <a href="#video" class="mscroll smooth-scroll"
+      ><img src="{% static 'images/mouse-icon.png' %}" alt="mouse icon"
+    /></a>
+
+    <!-- .................start from here..........................-->
+
+    {% block content %} {%endblock%}
+
+    <!-- .................end it here..........................-->
+
+    <footer id="Contact">
+      <div class="container">
+        <p>Feel <br />Free to get in touch.</p>
+        <a
+          href="mailto: jeegnangroup@gmail.com"
+          target="_blank"
+          class="email-btn"
+          ><span
+            ><i class="fa fa-envelope-o" aria-hidden="true"></i> Mail Us</span
+          ></a
+        >
+        <ul class="social-icons">
+          <p>Follow us on</p>
+
+          <li>
+            <a href="https://www.facebook.com/jee.gnan.1" target="_blank"
+              ><i class="fa fa-facebook" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/JEEGNAN" target="_blank"
+              ><i class="fa fa-twitter" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCYbLOPQStZotDJ3NRKyCJ8w"
+              target="_blank"
+              ><i class="fa fa-youtube" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/jee_gnan/" target="_blank"
+              ><i class="fa fa-instagram" aria-hidden="true"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="copyright">
+      <p>
+        {{footer_text}}
+      </p>
+    </div>
+  </body>
+  <script>
+    window.addEventListener("scroll", function () {
+      showFunction();
+    });
+
+    function showFunction() {
+      if (
+        document.body.scrollTop > 900 ||
+        document.documentElement.scrollTop > 900
+      ) {
+        document.getElementById("toptexts2").style.display = "block";
+      } else {
+        document.getElementById("toptexts2").style.display = "none";
+      }
+    }
+  </script>
+</html>

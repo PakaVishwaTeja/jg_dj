@@ -1,0 +1,84 @@
+{% extends 'form.html' %} {%block content %}
+
+<form>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="First Name"
+      id="firstname"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Last Name"
+      id="LastName"
+    />
+  </div>
+  <div class="form-group">
+    <span
+      ><i class="fa fa-phone" id="i6"></i>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Phone number"
+        title="must contain 10 digits"
+        required
+        pattern="[0-9]{10}"
+    /></span>
+  </div>
+  <div class="form-group">
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      placeholder="email"
+      aria-describedby="emailHelp"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Password"
+      id="Password"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Confirm Password"
+      id="Password"
+    />
+  </div>
+  <div class="dropdown">
+    <select
+      id="inp6"
+      name="Class"
+      class="btn dropdown-toggle"
+      style="background-color: white; border: 1px solid #dbdbdb;"
+    >
+      <option value="tenth">Completed Tenth</option>
+      <option value="+1">Completed 11th</option>
+      <option value="+2">Completed 12th</option>
+      <option value="others">Others</option>
+    </select>
+  </div>
+  <div id="button">
+    <button
+      style="margin-top: 5px; padding: 10px 60px 10px 60px; border-radius: 5px;"
+      type="submit"
+      class="btn btn-primary"
+    >
+      SignUp
+    </button>
+  </div>
+  <p style="font-weight: 400; text-align: center;">
+    Already Signed up? <a href="../log_in">Log In</a>
+  </p>
+</form>
+
+{% endblock %}
